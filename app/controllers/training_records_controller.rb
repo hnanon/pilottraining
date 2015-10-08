@@ -15,6 +15,7 @@ class TrainingRecordsController < ApplicationController
   # GET /training_records/new
   def new
     @training_record = TrainingRecord.new
+    @trainees = Trainee.all
   end
 
   # GET /training_records/1/edit

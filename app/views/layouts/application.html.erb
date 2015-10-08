@@ -22,7 +22,8 @@
           <% if current_user %>
             <li>Hello, <%= current_user.first_name %></li>
             <li><%= link_to 'Instructors', :users %></li>
-            <li><%= link_to 'Training Records', :training_records %></li>
+            <li><%= link_to 'New Trainee', :new_trainee %></li>
+            <li><%= link_to 'Training Records', :training_records %></li>            
             <li><%= link_to '<span class="fa fa-sign-out"></span> Logout'.html_safe, :logout, method: :post %></li>
           <% else %>
             <li><%= link_to '<span class="fa fa-rocket"></span> Sign Up'.html_safe, :signup %></li>

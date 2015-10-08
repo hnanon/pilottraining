@@ -29,22 +29,13 @@
             <tbody>
               <tr>
                 <td>Cockpit Procedures Training</td>
-                <td><%= @training_record.cockpit_procedures_training.date_completed %></td>
+                <td><%= @training_record.cockpit_procedures_training.present? ? @training_record.cockpit_procedures_training.date_completed : "Not Complete" %></td>
                 <td>N/A</td>
                 <td>N/A</td>
-                <td><%= @training_record.cockpit_procedures_training.user.first_name %> <%= @training_record.cockpit_procedures_training.user.last_name %></td>
-                <td><%= @training_record.cockpit_procedures_training.user.instructor_id %></td>
+                <td><%= @training_record.cockpit_procedures_training.present? ? "#{@training_record.cockpit_procedures_training.user.first_name} #{@training_record.cockpit_procedures_training.user.last_name}" : " " %></td>
+                <td><%= @training_record.cockpit_procedures_training.present? ? @training_record.cockpit_procedures_training.user.instructor_id : " " %></td>
                 <td class="disabled"></td>
               </tr>
-              <tr>
-                <td>Cockpit Procedures Training</td>
-                <td><%= @training_record.cockpit_procedures_training.date_completed %></td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td><%= @training_record.cockpit_procedures_training.user.first_name %> <%= @training_record.cockpit_procedures_training.user.last_name %></td>
-                <td><%= @training_record.cockpit_procedures_training.user.instructor_id %></td>
-                <td class="disabled"></td>
-              </tr>              
             </tbody>
           </table>
         </div>

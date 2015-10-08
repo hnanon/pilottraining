@@ -238,9 +238,13 @@ select {
 }
 
 .training_record p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .disabled {
   background: #EAEAEA;
+}
+
+.sidebar li {
+  margin: 0 0 10px 0;
 }

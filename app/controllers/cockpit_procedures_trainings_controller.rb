@@ -15,6 +15,7 @@ class CockpitProceduresTrainingsController < ApplicationController
   # GET /cockpit_procedures_trainings/new
   def new
     @cockpit_procedures_training = CockpitProceduresTraining.new
+    @training_records = TrainingRecord.all
   end
 
   # GET /cockpit_procedures_trainings/1/edit
@@ -25,10 +26,13 @@ class CockpitProceduresTrainingsController < ApplicationController
   # POST /cockpit_procedures_trainings.json
   def create
     @cockpit_procedures_training = CockpitProceduresTraining.new(cockpit_procedures_training_params)
+    @cockpit_procedures_training.user = current_user
+    @training_records = TrainingRecord.all
+ 
 
     respond_to do |format|
       if @cockpit_procedures_training.save
-        format.html { redirect_to @cockpit_procedures_training, notice: 'Cockpit procedures training was successfully created.' }
+        format.html { redirect_to :training_records, notice: 'Cockpit procedures training was successfully created.' }
         format.json { render :show, status: :created, location: @cockpit_procedures_training }
       else
         format.html { render :new }

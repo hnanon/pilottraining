@@ -1,14 +1,55 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row-fluid">
+    <div class="col-sm-10 col-sm-offset-1 main training_record">
+      <h2>CL-65 Pilot Training Record</h2>
+      <div class="row-fluid">
+        <div class="col-sm-6"><p><strong>NAME:</strong> <%= @training_record.trainee.first_name %> <%= @training_record.trainee.last_name %></p></div>
+        <div class="col-sm-6"><p><strong>ID:</strong> <%= @training_record.trainee.identification %></p></div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-sm-6"><p><strong>TYPE OF TRAINING:</strong> <%= @training_record.type_of_training %></p></div>
+        <div class="col-sm-6"><p><strong>PILOT POSITION:</strong> <%= @training_record.trainee.pilot_position %></p></div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-sm-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Training Type</th>
+                <th>Date Completed</th>
+                <th>Hrs  Min</th>
+                <th>Lndngs</th>
+                <th>Instructor</th>
+                <th>Instructor ID</th>                
+                <th>FAA</th>                
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td>Cockpit Procedures Training</td>
+                <td><%= @training_record.cockpit_procedures_training.date_completed %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.cockpit_procedures_training.user.first_name %> <%= @training_record.cockpit_procedures_training.user.last_name %></td>
+                <td><%= @training_record.cockpit_procedures_training.user.instructor_id %></td>
+                <td class="disabled"></td>
+              </tr>
+              <tr>
+                <td>Cockpit Procedures Training</td>
+                <td><%= @training_record.cockpit_procedures_training.date_completed %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.cockpit_procedures_training.user.first_name %> <%= @training_record.cockpit_procedures_training.user.last_name %></td>
+                <td><%= @training_record.cockpit_procedures_training.user.instructor_id %></td>
+                <td class="disabled"></td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Type of training:</strong>
-  <%= @training_record.type_of_training %>
-</p>
-
-<p>
-  <strong>Trainee:</strong>
-  <%= @training_record.trainee %>
-</p>
-
-<%= link_to 'Edit', edit_training_record_path(@training_record) %> |
-<%= link_to 'Back', training_records_path %>

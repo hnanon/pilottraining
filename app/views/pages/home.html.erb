@@ -1,0 +1,21 @@
+<div class="container landing">
+  <div class="row-fluid">
+    <div class="col-sm-12">
+    <%= image_tag 'logo-awac.png' %>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="col-sm-12">
+      <ul class="list-unstyled list-inline">
+      <% if current_user %>
+        <li>Hello, <%= current_user.first_name %></li>
+        <li><%= link_to "Students", users_path %></li>
+        <li><%= link_to "Logout", :logout, method: :post %></li>
+      <% else %>
+        <li><%= link_to "Sign Up", :signup %></li>
+        <li><%= link_to "Login", :login %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

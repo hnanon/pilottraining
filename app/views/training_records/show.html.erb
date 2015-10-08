@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of training:</strong>
+  <%= @training_record.type_of_training %>
+</p>
+
+<p>
+  <strong>Trainee:</strong>
+  <%= @training_record.trainee %>
+</p>
+
+<%= link_to 'Edit', edit_training_record_path(@training_record) %> |
+<%= link_to 'Back', training_records_path %>

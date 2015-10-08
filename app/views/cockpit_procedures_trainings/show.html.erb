@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date completed:</strong>
+  <%= @cockpit_procedures_training.date_completed %>
+</p>
+
+<p>
+  <strong>Trainee:</strong>
+  <%= @cockpit_procedures_training.trainee %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cockpit_procedures_training.user %>
+</p>
+
+<p>
+  <strong>Training record:</strong>
+  <%= @cockpit_procedures_training.training_record %>
+</p>
+
+<%= link_to 'Edit', edit_cockpit_procedures_training_path(@cockpit_procedures_training) %> |
+<%= link_to 'Back', cockpit_procedures_trainings_path %>

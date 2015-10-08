@@ -1,0 +1,2 @@
+module CockpitProceduresTrainingsHelper
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_completed: 2015-10-08
+  trainee_id: 
+  user_id: 
+  training_record_id: 
+
+two:
+  date_completed: 2015-10-08
+  trainee_id: 
+  user_id: 
+  training_record_id: 

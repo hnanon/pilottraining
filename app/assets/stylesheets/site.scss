@@ -1,0 +1,226 @@
+@media (min-width: 768px) { .container { max-width: 940px; } }
+
+html {
+   font-size: 13px;
+}
+
+.narrow {
+  max-width: 768px;
+}
+
+body {
+  background: #EFEFEF;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+form {
+  margin: 0 0 10px 0;
+}
+
+input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+input[type="button"] {
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background: #913D88;
+  border: none;
+  box-shadow: 0px 4px 0px 0px #674172;
+  color: #FFFFFF;
+}
+
+textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E2E2;
+  margin: 0 0 20px 0;
+  padding: 20px 0;
+
+}
+
+.logo {
+  color: #222222;
+  font-size: 18px;
+}
+
+.navigation li {
+  margin: 0 0 0 20px;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+}
+
+
+.title {
+  background: #54AFF0;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.title h5 {
+  margin: 0;
+}
+
+.main {
+  background: #FFFFFF;
+  border-bottom: 2px solid #E0E0E0;
+  padding: 20px;
+}
+
+.legend {
+  margin: 0 0 20px 0;
+}
+
+.legend li {
+  margin: 0 20px 0 0;
+}
+
+.legend img {
+  margin: 0 5px 0 0;
+}
+
+.meta li {
+  margin: 0 5px;
+  width: 15px;
+  text-align: center;
+}
+
+.meta a {
+  color: #FFFFFF;
+  padding: 3px 7px;
+}
+
+.my-reviews {
+  background: #E74C3C;
+  border-radius: 10px;
+}
+
+.class-reviews {
+  background: #913D88;
+  border-radius: 10px;
+}
+
+.meta a.icon-download {
+  padding: 3px 4px;
+}
+
+.icon-download {
+  background: #89C4F4;
+  border-radius: 10px;
+}
+
+.review-header {
+  background: #FDE3A7;
+  padding: 20px;
+}
+
+.review-header h6 {
+  margin: 0;
+}
+
+.review {
+  background: #ECF0F1;
+  margin: 0 0 20px 0;
+  padding: 20px;
+}
+
+.review:last-child {
+  margin: 0;
+}
+
+.review p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback {
+  border-left: 2px solid #E0E0E0;
+  margin: 0 0 20px 20px;
+  padding: 0 0 0 10px;
+}
+
+.form-field {
+  margin: 0 0 20px 0;
+}
+
+.error {
+  background: #EFEFEF;
+  color: #F62459;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+}
+
+.error p {
+  font-weight: bold;
+}
+
+.home {
+  background: image-url("bg-aerial.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.landing {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 200px auto;
+  max-width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.landing h4 {
+  border-bottom: 1px solid #BBBBBB;
+  padding: 0 0 10px 0;
+}
+
+.footer {
+  color: #AAAAAA;
+  font-size: 11px;
+  margin: 20px 0 40px;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+
+.footer .fa {
+  margin: 0 10px;
+}

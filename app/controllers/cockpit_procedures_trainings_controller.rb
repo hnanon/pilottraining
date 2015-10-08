@@ -16,6 +16,7 @@ class CockpitProceduresTrainingsController < ApplicationController
   def new
     @cockpit_procedures_training = CockpitProceduresTraining.new
     @training_records = TrainingRecord.all
+    @trainees = Trainee.all
   end
 
   # GET /cockpit_procedures_trainings/1/edit

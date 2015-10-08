@@ -5,5 +5,5 @@ class TrainingRecord < ActiveRecord::Base
   
   def trainee_full_name
     "#{ self.trainee.first_name } #{ self.trainee.last_name }"
-  end  
+  end
 end

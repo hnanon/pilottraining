@@ -29,6 +29,7 @@ class CockpitProceduresTrainingsController < ApplicationController
     @cockpit_procedures_training = CockpitProceduresTraining.new(cockpit_procedures_training_params)
     @cockpit_procedures_training.user = current_user
     @training_records = TrainingRecord.all
+    @trainees = Trainee.all
  
 
     respond_to do |format|

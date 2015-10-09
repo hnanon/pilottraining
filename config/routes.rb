@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   get 'pages/home'
 
-  resources :training_records
+  resources :training_records do
+    member do
+      get 'print'
+    end
+  end
+  
   resources :cockpit_procedures_trainings
   resources :trainees
   resources :users

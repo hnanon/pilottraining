@@ -1,5 +1,6 @@
 class TrainingRecordsController < ApplicationController
-  before_action :set_training_record, only: [:show, :edit, :update, :destroy]
+  before_action :set_training_record, only: [:show, :edit, :update, :print, :destroy]
+  layout "print", only: :print
 
   # GET /training_records
   # GET /training_records.json
@@ -50,6 +51,9 @@ class TrainingRecordsController < ApplicationController
         format.json { render json: @training_record.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def print
   end
 
   # DELETE /training_records/1

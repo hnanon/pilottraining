@@ -9,10 +9,6 @@ class TrainingRecord < ActiveRecord::Base
     "#{ self.trainee.first_name } #{ self.trainee.last_name }"
   end
   
-  def trainee_full_name_and_classification
-    "#{ self.trainee.first_name } #{ self.trainee.last_name } - #{ self.training_classification }"
-  end  
-  
   TRAINING_CLASSIFICATIONS = ["New Hire", "Upgrade"]
   
   TRAINING_TYPES = ["Cockpit Procedures", "Flight Training Simulator", "Windshear",

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012192731) do
+ActiveRecord::Schema.define(version: 20151012201424) do
 
   create_table "cockpit_procedures_trainings", force: :cascade do |t|
     t.date     "date_completed"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20151012192731) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "identification"
-    t.string   "pilot_position"
     t.integer  "status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false

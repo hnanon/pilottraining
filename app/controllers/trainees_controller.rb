@@ -69,6 +69,6 @@ class TraineesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trainee_params
-      params.require(:trainee).permit(:first_name, :last_name, :identification, :pilot_position)
+      params.require(:trainee).permit(:first_name, :last_name, :identification)
     end
 end

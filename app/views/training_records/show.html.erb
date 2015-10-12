@@ -35,7 +35,7 @@
             <tbody>
               <tr>
                 <td>Cockpit Procedures Training</td>
-                <td><%= @training_record.present? ? @training_record.cockpit_procedures_completion_date : "Not Complete" %></td>
+                <td><%= @training_record.present? ? @training_record.cockpit_procedures_completion_date : "" %></td>
                 <td>N/A</td>
                 <td>N/A</td>
                 <td><%= @training_record.present? ? @training_record.cockpit_procedures_instructor : " " %></td>
@@ -44,13 +44,22 @@
               </tr>
               <tr>
                 <td>Flight Training Simulator</td>
-                <td><%= @training_record.present? ? @training_record.flight_training_simulator_completion_date : "Not Complete" %></td>
+                <td><%= @training_record.present? ? @training_record.flight_training_simulator_completion_date : "" %></td>
                 <td><%= @training_record.flight_training_simulator_minutes.present? ? (@training_record.flight_training_simulator_minutes / 3600.00).round(2) : "" %></td>
                 <td>N/A</td>
                 <td><%= @training_record.present? ? @training_record.flight_training_simulator_instructor : " " %></td>
                 <td><%= @training_record.present? ? @training_record.flight_training_simulator_instructor_id: " " %></td>
                 <td class="disabled"></td>
               </tr>
+              <tr>
+                <td>Windshear</td>
+                <td><%= @training_record.present? ? @training_record.windshear_completion_date : "" %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.windshear_instructor : " " %></td>
+                <td><%= @training_record.present? ? @training_record.windshear_instructor_id: " " %></td>
+                <td class="disabled"></td>
+              </tr>              
             </tbody>
           </table>
         </div>

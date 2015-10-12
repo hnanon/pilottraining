@@ -81,6 +81,7 @@ class TrainingRecordsController < ApplicationController
     def training_record_attributes_params
       params.require(:training_record).permit(:training_classification, :trainee_id,
                 :cockpit_procedures_completion_date,
-                :flight_training_simulator_completion_date, :flight_training_simulator_minutes)
+                :flight_training_simulator_completion_date, :flight_training_simulator_minutes,
+                :windshear_completion_date)
     end
 end

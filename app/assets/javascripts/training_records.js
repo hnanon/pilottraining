@@ -12,5 +12,10 @@ $(document).on(".training_types").change(function(){
   else {
     $(".flight_training_simulator").hide(200);
   }
-
+  if (value == "Windshear"){
+    $(".windshear").show(200);
+  }
+  else {
+    $(".windshear").hide(200);
+  }
 });

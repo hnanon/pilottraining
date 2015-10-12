@@ -123,7 +123,52 @@
             <%= f.label :flight_training_simulator_minutes, "Flight Training Simulator Minutes" %>
             <%= f.text_field :flight_training_simulator_minutes, class: "form-field" %>
           </div>
-        </div> 
+        </div>
+        <div class="row-fluid windshear">
+          <%= f.label :date_select, "Windshear Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.windshear_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"windshear_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.windshear_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"windshear_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.windshear_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"windshear_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+        </div>         
         <div class="row-fluid">
           <%= f.submit "Update Training Record" %>
         </div>

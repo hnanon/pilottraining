@@ -28,7 +28,7 @@ class TrainingRecordsController < ApplicationController
   # POST /training_records.json
   def create
     @training_record = TrainingRecord.new(training_record_params)
-
+    @training_record.set_status
     respond_to do |format|
       if @training_record.save
         format.html { redirect_to @training_record, notice: 'Training record was successfully created.' }
@@ -82,6 +82,7 @@ class TrainingRecordsController < ApplicationController
       params.require(:training_record).permit(:training_classification, :trainee_id,
                 :cockpit_procedures_completion_date,
                 :flight_training_simulator_completion_date, :flight_training_simulator_minutes,
-                :windshear_completion_date)
+                :windshear_completion_date,
+                :high_minimums_completion_date)
     end
 end

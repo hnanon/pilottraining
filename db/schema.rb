@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012144957) do
+ActiveRecord::Schema.define(version: 20151012192731) do
 
   create_table "cockpit_procedures_trainings", force: :cascade do |t|
     t.date     "date_completed"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20151012144957) do
     t.string   "loft_landings"
     t.string   "loft_instructor"
     t.string   "loft_instructor_id"
+    t.integer  "status"
   end
 
   add_index "training_records", ["trainee_id"], name: "index_training_records_on_trainee_id"

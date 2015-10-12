@@ -168,7 +168,52 @@
               )
             %>
           </div>
-        </div>         
+        </div>
+        <div class="row-fluid high_minimums">
+          <%= f.label :date_select, "High Minimums Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.high_minimums_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"high_minimums_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.high_minimums_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"high_minimums_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.high_minimums_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"high_minimums_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+        </div> 
         <div class="row-fluid">
           <%= f.submit "Update Training Record" %>
         </div>

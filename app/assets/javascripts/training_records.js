@@ -18,4 +18,10 @@ $(document).on(".training_types").change(function(){
   else {
     $(".windshear").hide(200);
   }
+  if (value == "High Minimums"){
+    $(".high_minimums").show(200);
+  }
+  else {
+    $(".high_minimums").hide(200);
+  }  
 });

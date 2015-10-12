@@ -2,7 +2,7 @@
   <div class="row-fluid">
     <div class="col-sm-10 col-sm-offset-1 title">
       <h5>Training Records</h5>
-      <%= link_to "Create a New Training Record", new_training_record_path, class: "pull-right" %>
+      <%= link_to "Create New Training Record", new_training_record_path, class: "pull-right" %>
     </div>
   </div>
 </div>
@@ -26,7 +26,7 @@
               <td><%= training_record.training_classification %></td>
               <td><%= training_record.trainee.present? ? (link_to "#{training_record.trainee.first_name} #{training_record.trainee.last_name}", training_record) : " " %></td>
               <td><%= training_record.trainee.present? ? training_record.created_at.to_date : "" %></td>
-              <td></td>
+              <td><%= training_record.status.present? ? training_record.status.humanize : "" %></td>
             </tr>
           <% end %>
         </tbody>

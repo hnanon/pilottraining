@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :cockpit_procedures_trainings
   resources :trainees
   resources :users
   resources :user_sessions

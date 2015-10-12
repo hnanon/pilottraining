@@ -28,7 +28,7 @@ class TraineesController < ApplicationController
 
     respond_to do |format|
       if @trainee.save
-        format.html { redirect_to @trainee, notice: 'Trainee was successfully created.' }
+        format.html { redirect_to :new_training_record, notice: 'Trainee was successfully created.' }
         format.json { render :show, status: :created, location: @trainee }
       else
         format.html { render :new }

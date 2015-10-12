@@ -100,7 +100,12 @@ select {
 }
 
 .title h5 {
+  display: inline-block;
   margin: 0;
+}
+
+.title a {
+  color: #8FB4FF;
 }
 
 .main {
@@ -237,6 +242,12 @@ select {
   text-transform: uppercase;
 }
 
+.training_record h5 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
 .training_record p {
   font-size: 15px;
 }
@@ -247,4 +258,8 @@ select {
 
 .sidebar li {
   margin: 0 0 10px 0;
+}
+
+.cockpit_procedures, .flight_training_simulator {
+  display: none;
 }

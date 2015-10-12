@@ -17,10 +17,12 @@ class TrainingRecordsController < ApplicationController
   def new
     @training_record = TrainingRecord.new
     @trainees = Trainee.all
+    @attributes = TrainingRecord.column_names
   end
 
   # GET /training_records/1/edit
   def edit
+    @trainees = Trainee.all
   end
 
   # POST /training_records
@@ -43,7 +45,8 @@ class TrainingRecordsController < ApplicationController
   # PATCH/PUT /training_records/1.json
   def update
     respond_to do |format|
-      if @training_record.update(training_record_params)
+      if @training_record.attributes = (training_record_attributes_params)
+        @training_record.update_instructor(current_user, params)
         format.html { redirect_to @training_record, notice: 'Training record was successfully updated.' }
         format.json { render :show, status: :ok, location: @training_record }
       else
@@ -74,6 +77,11 @@ class TrainingRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def training_record_params
-      params.require(:training_record).permit(:type_of_training, :trainee_id)
+      params.require(:training_record).permit(:training_classification, :trainee_id)
+    end
+    def training_record_attributes_params
+      params.require(:training_record).permit(:training_classification, :trainee_id,
+                :cockpit_procedures_completion_date,
+                :flight_training_simulator_completion_date, :flight_training_simulator_minutes)
     end
 end

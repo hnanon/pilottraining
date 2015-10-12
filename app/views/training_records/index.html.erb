@@ -1,37 +1,32 @@
 <div class="container">
   <div class="row-fluid">
-  <div class="col-sm-3 sidebar">
-    <h5 class="title">Submit Training Types</h5>
-    <div class="main">
-      <ul class="list-unstyled">
-        <li><%= link_to "Create a New Training Record", new_training_record_path %></li>
-        <li><%= link_to "Cockpit Procedures Training", new_cockpit_procedures_training_path %></li>
-      </ul>
-    </div>
-  </div>
-  <div class="row-fluid">
-    <div class="col-sm-9 title">
+    <div class="col-sm-10 col-sm-offset-1 title">
       <h5>Training Records</h5>
+      <%= link_to "Create a New Training Record", new_training_record_path, class: "pull-right" %>
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row-fluid">
-    <div class="col-sm-9 main">
+    <div class="col-sm-10 col-sm-offset-1 main">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Type of Training</th>
+            <th>Training Classification</th>
             <th>Trainee</th>
+            <th>Date Created</th>
+            <th>Status</th>
           </tr>
         </thead>
 
         <tbody>
           <% @training_records.each do |training_record| %>
             <tr>
-              <td><%= training_record.type_of_training %></td>
+              <td><%= training_record.training_classification %></td>
               <td><%= training_record.trainee.present? ? (link_to "#{training_record.trainee.first_name} #{training_record.trainee.last_name}", training_record) : " " %></td>
+              <td><%= training_record.trainee.present? ? training_record.created_at.to_date : "" %></td>
+              <td></td>
             </tr>
           <% end %>
         </tbody>

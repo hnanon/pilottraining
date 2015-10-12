@@ -1,4 +1,6 @@
 class TrainingRecord < ActiveRecord::Base
+  include ActiveModel::Dirty
+
   belongs_to :trainee
   has_many :users
   has_one :cockpit_procedures_training
@@ -6,4 +8,29 @@ class TrainingRecord < ActiveRecord::Base
   def trainee_full_name
     "#{ self.trainee.first_name } #{ self.trainee.last_name }"
   end
+  
+  TRAINING_CLASSIFICATIONS = ["New Hire", "Upgrade"]
+  
+  TRAINING_TYPES = ["Cockpit Procedures", "Flight Training Simulator", "Windshear",
+                   "High Minimums", "1800 RVR", "RNAV", "Category II", "Oral",
+                   "Proficiency Check Simulator", "Loft"]
+  
+  def update_instructor(current_user, params)
+    #foo.changed_attributes.keys.each do |attribute|
+      #username_attribute = "#{attribute}_user="
+      #foo.send(username_attribute, current_user.name) if foo.respond_to?(username_attribute)
+    #end
+    
+    instructor_full_name = "#{ current_user.first_name } #{ current_user.last_name }"
+
+    if self.changed_attributes.has_key?("cockpit_procedures_completion_date")
+      self.cockpit_procedures_instructor = instructor_full_name
+      self.cockpit_procedures_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("flight_training_simulator_completion_date")
+      self.flight_training_simulator_instructor = instructor_full_name
+      self.flight_training_simulator_instructor_id = current_user.instructor_id
+    end
+    save!
+  end
+  
 end

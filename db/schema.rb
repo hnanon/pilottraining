@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008015340) do
+ActiveRecord::Schema.define(version: 20151012144957) do
 
   create_table "cockpit_procedures_trainings", force: :cascade do |t|
     t.date     "date_completed"
@@ -37,10 +37,45 @@ ActiveRecord::Schema.define(version: 20151008015340) do
   end
 
   create_table "training_records", force: :cascade do |t|
-    t.string   "type_of_training"
+    t.string   "training_classification"
     t.integer  "trainee_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.date     "cockpit_procedures_completion_date"
+    t.string   "cockpit_procedures_instructor"
+    t.string   "cockpit_procedures_instructor_id"
+    t.date     "flight_training_simulator_completion_date"
+    t.integer  "flight_training_simulator_minutes"
+    t.string   "flight_training_simulator_instructor"
+    t.string   "flight_training_simulator_instructor_id"
+    t.date     "windshear_completion_date"
+    t.string   "windshear_instructor"
+    t.string   "windshear_instructor_id"
+    t.date     "high_minimums_completion_date"
+    t.string   "high_minimums_instructor"
+    t.string   "high_minimums_instructor_id"
+    t.date     "_1800_rvr_completion_date"
+    t.string   "_1800_rvr_instructor"
+    t.string   "_1800_rvr_instructor_id"
+    t.date     "rnav_completion_date"
+    t.string   "rnav_rvr_instructor"
+    t.string   "rnav_rvr_instructor_id"
+    t.date     "category_ii_completion_date"
+    t.string   "category_ii_instructor"
+    t.string   "category_ii_instructor_id"
+    t.date     "oral_completion_date"
+    t.string   "oral_instructor"
+    t.string   "oral_instructor_id"
+    t.string   "oral_faa"
+    t.date     "proficiency_check_simulator_completion_date"
+    t.string   "proficiency_check_simulator_landings"
+    t.string   "proficiency_check_simulator_instructor"
+    t.string   "proficiency_check_simulator_instructor_id"
+    t.string   "proficiency_check_simulator_faa"
+    t.date     "loft_completion_date"
+    t.string   "loft_landings"
+    t.string   "loft_instructor"
+    t.string   "loft_instructor_id"
   end
 
   add_index "training_records", ["trainee_id"], name: "index_training_records_on_trainee_id"

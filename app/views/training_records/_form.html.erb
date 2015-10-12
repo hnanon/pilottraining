@@ -24,7 +24,7 @@
         </div>
         <div class="row-fluid">
           <%= f.label :trainee_id, "Trainee" %>
-          <%= f.collection_select(:trainee_id, @trainees, :id, :trainee_full_name, { prompt: "Select Trainee" }, { class: "form-field" }) %>
+          <%= f.collection_select(:trainee_id, @trainees, :id, :trainee_full_name_and_classification, { prompt: "Select Trainee" }, { class: "form-field" }) %>
         </div>        
         <div class="row-fluid">
           <%= f.submit "Create a New Training Record" %>

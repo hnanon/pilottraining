@@ -16,8 +16,7 @@ class TrainingRecordsController < ApplicationController
   # GET /training_records/new
   def new
     @training_record = TrainingRecord.new
-    @trainees = Trainee.all
-    @attributes = TrainingRecord.column_names
+    @trainees = Trainee.all.order( 'last_name DESC' )
   end
 
   # GET /training_records/1/edit

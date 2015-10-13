@@ -40,7 +40,10 @@ class TrainingRecord < ActiveRecord::Base
       self.windshear_instructor_id = current_user.instructor_id
     elsif self.changed_attributes.has_key?("high_minimums_completion_date")
       self.high_minimums_instructor = instructor_full_name
-      self.high_minimums_instructor_id = current_user.instructor_id 
+      self.high_minimums_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("_1800_rvr_completion_date")
+      self._1800_rvr_instructor = instructor_full_name
+      self._1800_rvr_instructor_id = current_user.instructor_id      
     end
     
     if !self.attributes.all?(&:blank?)

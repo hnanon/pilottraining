@@ -83,6 +83,7 @@ class TrainingRecordsController < ApplicationController
                 :cockpit_procedures_completion_date,
                 :flight_training_simulator_completion_date, :flight_training_simulator_minutes,
                 :windshear_completion_date,
-                :high_minimums_completion_date)
+                :high_minimums_completion_date,
+                :_1800_rvr_completion_date)
     end
 end

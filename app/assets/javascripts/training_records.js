@@ -23,5 +23,11 @@ $(document).on(".training_types").change(function(){
   }
   else {
     $(".high_minimums").hide(200);
+  }
+  if (value == "1800 RVR"){
+    $("._1800_rvr").show(200);
+  }
+  else {
+    $("._1800_rvr").hide(200);
   }  
 });

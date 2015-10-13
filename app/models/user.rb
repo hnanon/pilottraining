@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
 
-  validates :email, uniqueness: true
+  validates :email, uniqueness: true, case_sensitive: false
   
   has_many :training_records
   has_many :cockpit_procedures_trainings

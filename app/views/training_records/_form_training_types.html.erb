@@ -258,7 +258,248 @@
               )
             %>
           </div>
-        </div>         
+        </div>
+        <div class="row-fluid rnav">
+          <%= f.label :date_select, "RNAV Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.rnav_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"rnav_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.rnav_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"rnav_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.rnav_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"rnav_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+        </div>
+        <div class="row-fluid category_ii">
+          <%= f.label :date_select, "Category II Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.category_ii_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"category_ii_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.category_ii_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"category_ii_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.category_ii_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"category_ii_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+        </div>
+        <div class="row-fluid oral">
+          <%= f.label :date_select, "Oral Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.oral_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"oral_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.oral_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"oral_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.oral_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"oral_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+          <div class="row-fluid">
+            <%= f.label :oral_faa, "Oral FAA" %>
+            <%= f.text_field :oral_faa, class: "form-field" %>
+          </div>
+        </div>
+        <div class="row-fluid proficiency_check_simulator">
+          <%= f.label :date_select, "Proficiency Check Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.proficiency_check_simulator_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"proficiency_check_simulator_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.proficiency_check_simulator_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"proficiency_check_simulator_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.proficiency_check_simulator_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"proficiency_check_simulator_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+          <div class="row-fluid">
+            <%= f.label :proficiency_check_simulator_landings, "Proficiency Check Simulator Landings" %>
+            <%= f.text_field :proficiency_check_simulator_landings, class: "form-field" %>
+          </div>
+          <div class="row-fluid">
+            <%= f.label :proficiency_check_simulator_faa, "Proficiency Check Simulator FAA" %>
+            <%= f.text_field :proficiency_check_simulator_faa, class: "form-field" %>
+          </div>
+        </div>
+        <div class="row-fluid loft">
+          <%= f.label :date_select, "LOFT Completion Date" %>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_year(
+                @training_record.loft_completion_date.try(:year),
+                {
+                  :prompt => "Year",
+                  :start_year => Time.zone.now.year - 5,
+                  :end_year => Time.zone.now.year + 1,
+                  :field_name => :"loft_completion_date(1i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+            <%#= f.date_select :date_completed, { :class => "form-field-mini" } %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_month(
+               @training_record.loft_completion_date.try(:month),
+                {
+                  :prompt => "Month",
+                  :field_name => :"loft_completion_date(2i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field "
+              )
+            %>
+          </div>
+          <div class="col-sm-4 no-left-gutter">
+            <%=
+              select_day(
+                @training_record.loft_completion_date.try(:day),
+                {
+                  :prompt => "Day",
+                  :field_name => :"loft_completion_date(3i)",
+                  :prefix => :training_record
+                },
+                :class => "form-field"
+              )
+            %>
+          </div>
+          <div class="row-fluid">
+            <%= f.label :loft_landings, "LOFT Landings" %>
+            <%= f.text_field :loft_landings, class: "form-field" %>
+          </div>
+        </div>
         <div class="row-fluid">
           <%= f.submit "Update Training Record" %>
         </div>

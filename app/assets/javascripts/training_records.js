@@ -29,5 +29,35 @@ $(document).on(".training_types").change(function(){
   }
   else {
     $("._1800_rvr").hide(200);
+  }
+  if (value == "RNAV"){
+    $(".rnav").show(200);
+  }
+  else {
+    $(".rnav").hide(200);
+  }
+  if (value == "Category II"){
+    $(".category_ii").show(200);
+  }
+  else {
+    $(".category_ii").hide(200);
+  }
+  if (value == "Oral"){
+    $(".oral").show(200);
+  }
+  else {
+    $(".oral").hide(200);
   }  
+  if (value == "Proficiency Check Simulator"){
+    $(".proficiency_check_simulator").show(200);
+  }
+  else {
+    $(".proficiency_check_simulator").hide(200);
+  }
+  if (value == "LOFT"){
+    $(".loft").show(200);
+  }
+  else {
+    $(".loft").hide(200);
+  }
 });

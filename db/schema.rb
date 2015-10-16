@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012201424) do
+ActiveRecord::Schema.define(version: 20151016145115) do
 
   create_table "cockpit_procedures_trainings", force: :cascade do |t|
     t.date     "date_completed"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 20151012201424) do
     t.string   "_1800_rvr_instructor"
     t.string   "_1800_rvr_instructor_id"
     t.date     "rnav_completion_date"
-    t.string   "rnav_rvr_instructor"
-    t.string   "rnav_rvr_instructor_id"
+    t.string   "rnav_instructor"
+    t.string   "rnav_instructor_id"
     t.date     "category_ii_completion_date"
     t.string   "category_ii_instructor"
     t.string   "category_ii_instructor_id"

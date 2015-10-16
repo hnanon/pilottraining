@@ -43,7 +43,22 @@ class TrainingRecord < ActiveRecord::Base
       self.high_minimums_instructor_id = current_user.instructor_id
     elsif self.changed_attributes.has_key?("_1800_rvr_completion_date")
       self._1800_rvr_instructor = instructor_full_name
-      self._1800_rvr_instructor_id = current_user.instructor_id      
+      self._1800_rvr_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("rnav_completion_date")
+      self.rnav_instructor = instructor_full_name
+      self.rnav_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("category_ii_completion_date")
+      self.category_ii_instructor = instructor_full_name
+      self.category_ii_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("oral_completion_date")
+      self.oral_instructor = instructor_full_name
+      self.oral_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("proficiency_check_simulator_completion_date")
+      self.proficiency_check_simulator_instructor = instructor_full_name
+      self.proficiency_check_simulator_instructor_id = current_user.instructor_id
+    elsif self.changed_attributes.has_key?("loft_completion_date")
+      self.loft_instructor = instructor_full_name
+      self.loft_instructor_id = current_user.instructor_id
     end
     
     if !self.attributes.all?(&:blank?)

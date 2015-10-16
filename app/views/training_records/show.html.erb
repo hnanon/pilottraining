@@ -74,7 +74,52 @@
                 <td><%= @training_record.present? ? @training_record._1800_rvr_instructor : "" %></td>
                 <td><%= @training_record.present? ? @training_record._1800_rvr_instructor_id : "" %></td>
                 <td class="disabled"></td>
-              </tr>              
+              </tr>
+              <tr>
+                <td>RNAV</td>
+                <td><%= @training_record.present? ? @training_record.rnav_completion_date : "" %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.rnav_instructor : "" %></td>
+                <td><%= @training_record.present? ? @training_record.rnav_instructor_id : "" %></td>
+                <td class="disabled"></td>
+              </tr>
+              <tr>
+                <td>Category II</td>
+                <td><%= @training_record.present? ? @training_record.category_ii_completion_date : "" %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.category_ii_instructor : "" %></td>
+                <td><%= @training_record.present? ? @training_record.category_ii_instructor_id : "" %></td>
+                <td class="disabled"></td>
+              </tr>
+              <tr>
+                <td>Oral</td>
+                <td><%= @training_record.present? ? @training_record.oral_completion_date : "" %></td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.oral_instructor : "" %></td>
+                <td><%= @training_record.present? ? @training_record.oral_instructor_id : "" %></td>
+                <td><%= @training_record.present? ? @training_record.oral_faa : "" %></td>
+              </tr>
+              <tr>
+                <td>Proficiency Check Simulator</td>
+                <td><%= @training_record.present? ? @training_record.proficiency_check_simulator_completion_date : "" %></td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.proficiency_check_simulator_landings : "" %></td>
+                <td><%= @training_record.present? ? @training_record.proficiency_check_simulator_instructor : "" %></td>
+                <td><%= @training_record.present? ? @training_record.proficiency_check_simulator_instructor_id : "" %></td>
+                <td><%= @training_record.present? ? @training_record.proficiency_check_simulator_faa : "" %></td>
+              </tr>
+              <tr>
+                <td>LOFT</td>
+                <td><%= @training_record.present? ? @training_record.loft_completion_date : "" %></td>
+                <td>N/A</td>
+                <td><%= @training_record.present? ? @training_record.loft_landings : "" %></td>
+                <td><%= @training_record.present? ? @training_record.loft_instructor : "" %></td>
+                <td><%= @training_record.present? ? @training_record.loft_instructor_id : "" %></td>
+                <td class="disabled"></td>
+              </tr>
             </tbody>
           </table>
         </div>

@@ -16,6 +16,7 @@
             <th>Training Classification</th>
             <th>Trainee</th>
             <th>Date Created</th>
+            <th>Last Updated</th>            
             <th>Status</th>
           </tr>
         </thead>
@@ -26,6 +27,7 @@
               <td><%= training_record.training_classification %></td>
               <td><%= training_record.trainee.present? ? (link_to "#{training_record.trainee.first_name} #{training_record.trainee.last_name}", training_record) : " " %></td>
               <td><%= training_record.trainee.present? ? training_record.created_at.to_date : "" %></td>
+              <td><%= training_record.trainee.present? ? training_record.updated_at.to_date : "" %></td>
               <td><%= training_record.status.present? ? training_record.status.humanize : "" %></td>
             </tr>
           <% end %>

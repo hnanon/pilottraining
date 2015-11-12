@@ -13,6 +13,12 @@ class TrainingRecord < ActiveRecord::Base
                    "High Minimums", "1800 RVR", "RNAV", "Category II", "Oral",
                    "Proficiency Check Simulator", "LOFT"]
                    
+  PREFLIGHT_TRAINING_TYPES = ["Preflight Checks / Visual Inspection", "Taxiing", "Pre-Takeoff Checks"]
+  
+  TRAINING_TYPE_DAYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+  
+  TRAINING_TYPE_GRADES = ["1", "2", "3", "4", "5"]
+                   
   def trainee_full_name
     "#{ self.trainee.first_name } #{ self.trainee.last_name }"
   end

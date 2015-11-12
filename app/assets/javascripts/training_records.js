@@ -61,3 +61,25 @@ $(document).on(".training_types").change(function(){
     $(".loft").hide(200);
   }
 });
+
+$(document).on(".preflight_training_types").change(function(){
+  var value = $(".preflight_training_types option:selected").val();
+  if (value == "Preflight Checks / Visual Inspection"){
+    $(".preflight_checks_visual_inspection").show(200);
+  }
+  else {
+    $(".preflight_checks_visual_inspection").hide(200);
+  }
+  if (value == "Taxiing"){
+    $(".taxiing").show(200);
+  }
+  else {
+    $(".taxiing").hide(200);
+  }
+  if (value == "Pre-Takeoff Checks"){
+    $(".pre-takeoff_checks").show(200);
+  }
+  else {
+    $(".pre-takeoff_checks").hide(200);
+  }
+});

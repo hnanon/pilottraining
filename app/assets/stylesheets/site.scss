@@ -269,10 +269,21 @@ select {
 }
 
 .cockpit_procedures, .flight_training_simulator, .windshear, .high_minimums,
-._1800_rvr, .rnav, .category_ii, .oral, .proficiency_check_simulator, .oral, .loft {
+._1800_rvr, .rnav, .category_ii, .oral, .proficiency_check_simulator, .oral, .loft,
+.preflight_checks_visual_inspection, .taxiing, .pre-takeoff_checks {
   display: none;
 }
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.day-seperator {
+  border-bottom: 1px solid #DDDDDD;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
+.day-seperator:last-child {
+  border-bottom: none;
 }

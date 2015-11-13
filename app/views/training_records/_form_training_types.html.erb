@@ -513,12 +513,56 @@
           <%= select_tag nil, options_for_select(TrainingRecord::PREFLIGHT_TRAINING_TYPES), prompt: "Select a Training Type", class: "form-field preflight_training_types" %>
         </div>
         <div class="row-fluid preflight_checks_visual_inspection">
-          <%= f.label :date_select, "Preflight Checks / Visual Inspection Grade" %>
-          <div class="col-sm-6 no-left-gutter">
-            <%= select_tag nil, options_for_select(TrainingRecord::TRAINING_TYPE_DAYS), prompt: "Select a Day", class: "form-field" %>
+          <%= f.label :date_select, "Preflight Checks / Visual Inspection Grades" %>
+          <div class="row day-seperator">
+            <div class="col-sm-2 text-center">
+              <p>Day 1</p>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "1") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "2") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "3") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "4") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "5") %>
+            </div>
           </div>
-          <div class="col-sm-6 no-left-gutter">
-            <%= select_tag nil, options_for_select(TrainingRecord::TRAINING_TYPE_GRADES), prompt: "Select a Grade", class: "form-field" %>
+          <div class="row day-seperator">
+            <div class="col-sm-2 text-center">
+              <p>Day 2</p>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "1") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "2") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "3") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "4") %>
+            </div>
+            <div class="col-sm-2 text-center">
+              <%= radio_button_tag nil, "1", false, class: "color_input" %>
+              <%= label_tag(nil, "5") %>
+            </div>
           </div>
         </div>
         <div class="row-fluid taxiing">
